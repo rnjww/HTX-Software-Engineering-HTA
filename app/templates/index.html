@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Processing Pipeline</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Image Processing Pipeline</h1>
+      <p>Upload a JPG/PNG to process.</p>
+
+      <form id="upload-form">
+        <input type="file" id="file-input" name="file" accept=".jpg,.jpeg,.png" required />
+        <button type="submit">Upload</button>
+      </form>
+
+      <p id="status"></p>
+      <section id="result" class="hidden">
+        <h2>Result</h2>
+        <p><strong>Original file:</strong> <span id="original-name"></span></p>
+        <p><strong>Caption:</strong> <span id="caption"></span></p>
+        <ul>
+          <li><strong>Width:</strong> <span id="meta-width"></span></li>
+          <li><strong>Height:</strong> <span id="meta-height"></span></li>
+          <li><strong>Format:</strong> <span id="meta-format"></span></li>
+          <li><strong>Size:</strong> <span id="meta-size"></span> bytes</li>
+        </ul>
+        <div class="thumbs">
+          <div>
+            <p>Small</p>
+            <img id="thumb-small" alt="small thumbnail" />
+          </div>
+          <div>
+            <p>Medium</p>
+            <img id="thumb-medium" alt="medium thumbnail" />
+          </div>
+        </div>
+      </section>
+
+      <p class="docs-link"><a href="/docs">Developer docs</a></p>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
