@@ -9,16 +9,21 @@ This project is a complete local image-processing pipeline with:
 - AI captioning using a HuggingFace BLIP model (loaded once on startup).
 - SQLite persistence with processing status and timing metrics.
 
-## Setup
-1. Use Python 3.10+.
-2. Create and activate a virtual environment.
-3. Install dependencies:
+## Setup Instructions
+Create venv and install requirement.txt:
+1. Press Ctrl+Shift+P and search for Python: Select Interpreter
+2. Click on + Create Virtual Environment
+3. Select Venv
+4. Select a python interpreter (Use Python 3.10+)
+5. Select the requirements.txt and click OK
+OR
+6. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run server
+## Run server in command prompt
 ```bash
 uvicorn app.main:app --reload
 ```
@@ -40,7 +45,6 @@ Developer docs are available at: `http://127.0.0.1:8000/docs`
 - `GET /api/stats` - aggregate processing stats.
 
 ## Example requests/responses
-
 ### Upload image
 ```bash
 curl -X POST "http://127.0.0.1:8000/api/images" \
